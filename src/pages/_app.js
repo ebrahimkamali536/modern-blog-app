@@ -1,11 +1,14 @@
 import Layout from "../layout";
-import "../../styles/globals.css"
+import "../../styles/globals.css";
+import {ThemeProvider} from "next-themes"
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
 
